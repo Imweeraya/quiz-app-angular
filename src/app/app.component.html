@@ -1,18 +1,21 @@
 
+<div class="main vertical-center">
 
-<div class="container">
+  <div class="container">
 
 
-  <h2 class="my-5 ">{{question.text}}</h2> <!-- mb = marginbuttom 1-5  my = แกนy เว้นบนล่างพร้อมกัน-->
-  <h3 class="mb-3">Who painted the Mona Lisa</h3>
+    <h2 class="mb-5 mt-3">{{question.text}}</h2> <!-- mb = marginbuttom 1-5  my = แกนy เว้นบนล่างพร้อมกัน-->
+    <h3 class="mb-3">Who painted the Mona Lisa</h3>
 
-  <div class="row">
-      <div *ngFor="let choice of question.choices" class="col-xs-12 col-md-6 g-2"> 
-        <button (click)="onClickChoice(choice)" class="btn btn-primary" style="width: 100%">{{choice}}</button>
-      </div>
+    <div class="row">
+        <div *ngFor="let choice of question.choices" class="col-xs-12 col-md-6 g-2"> 
+          <button (click)="onClickChoice(choice)" class="btn btn-danger" style="width: 100%">{{choice}}</button>
+        </div>
+    </div>
+
+    
   </div>
 
-  
 </div>
 
 <!-- g-2 glutter ความห่างระหว่างปุ่มห่าง 2 -->
