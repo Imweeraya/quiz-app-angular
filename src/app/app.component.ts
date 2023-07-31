@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,18 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  question = {
-    text:'Who painted the Mona Lisa?',
-    choices:[
-      'Pablo Picasso',
-      'Leonardo Da Vinci',
-      'Vincent van Gogh',
-      'Michelangelo'
-    ]
-  }
-
-  onClickChoice(text:string){
-    console.log(text);
-  }
 
 }
