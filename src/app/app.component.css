@@ -1,0 +1,9 @@
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  /* Apply the animation to the h1 element */
+.logo {
+    animation: fadeInOut 3s; /* The animation will loop indefinitely */
+  }

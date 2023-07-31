@@ -19,7 +19,7 @@ export class QuizComponent {
 
 
   constructor(){
-    this.questions = this.quizService.getQuizData();
+      this.questions = this.quizService.getQuizData();
       this.questions[this.currentQuestionIndex].choices.sort((a,b)=> 0.5 - Math.random()) //เรียงตัวเลือกใหม่
       this.questions.sort((a, b) => 0.5 - Math.random()); //เรียงข้อใหม่ 
       this.audio.src = '../assets/audio/clickchoice.wav';
@@ -30,6 +30,7 @@ export class QuizComponent {
     this.playSound();
 
     if(choice.isAnswer) this.score++
+
     if(this.currentQuestionIndex < this.questions.length - 1){
        this.currentQuestionIndex++
     }else{
