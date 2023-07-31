@@ -14,6 +14,7 @@
   
       <div class="row">
         <div *ngFor="let choice of questions[currentQuestionIndex].choices" class="col-xs-12 col-md-6 g-2">
+            <!-- ngFor use for releasse 4 choices of question -->
           <button (click)="onClickChoice(choice)" class="btn btn-danger" style="width: 100%">{{choice.text}}</button>
         </div>
       </div>

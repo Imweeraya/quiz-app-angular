@@ -4,6 +4,8 @@ import { Question } from './question';
 @Injectable({
   providedIn: 'root'
 })
+
+//Data of questions
 export class QuizService {
   quizData: Question[] = [
     {

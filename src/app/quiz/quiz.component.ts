@@ -12,24 +12,27 @@ export class QuizComponent {
 
   quizService: QuizService = inject(QuizService);
 
-  questions: Question[];
+  questions: Question[]; // Question is type of questions
   currentQuestionIndex = 0;
   isEnd = false;
   score = 0;
 
 
-  constructor(){
+  //intitial value when start
+  constructor(){ 
       this.questions = this.quizService.getQuizData();
       this.questions[this.currentQuestionIndex].choices.sort((a,b)=> 0.5 - Math.random()) //เรียงตัวเลือกใหม่
       this.questions.sort((a, b) => 0.5 - Math.random()); //เรียงข้อใหม่ 
       this.audio.src = '../assets/audio/clickchoice.wav';
   }
 
-  onClickChoice(choice: Choices){
+  //Method when user click choice
+  onClickChoice(choice: Choices){ //variable choice type Choices
     console.log('User clicked : ' + choice.text);
-    this.playSound();
+    console.log('Score : ' + this.score);
+    this.playSound(); //play sound when click
 
-    if(choice.isAnswer) this.score++
+    if(choice.isAnswer) this.score++ //if answer is correct
 
     if(this.currentQuestionIndex < this.questions.length - 1){
        this.currentQuestionIndex++
@@ -38,6 +41,7 @@ export class QuizComponent {
     }
   }
 
+  // Play sound
   private playSound(){
     this.audio.load();
     this.audio.addEventListener('canplaythrough' , () => {
@@ -45,7 +49,9 @@ export class QuizComponent {
     })
   }
 
-  onClickNewQuizz(){
+
+  // OnClick for New quiz
+  onClickNewQuizz(){ //function public for call new quizz
     this.newquiz()
   }
 
