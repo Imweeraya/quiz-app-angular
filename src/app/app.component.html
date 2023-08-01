@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: absolute; width: 100vw;">
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary " style="position: absolute; width: 100vw;">
   <div class="container-fluid">
     <a class="navbar-brand logo" href="#" style="font-weight: 700; color: rgb(210, 44, 111);"> QUIZ APP 🧠</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -6,18 +6,27 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">Learn</a>
+          <a [routerLink]="['/']" class="nav-link" (click)="activeMenu=0" [class.active]="activeMenu===0"  href="">Quiz</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">Quiz</a>
+          <a [routerLink]="['/learn']" class="nav-link" (click)="activeMenu=1" [class.active]="activeMenu===1"  href="">Learn</a>
         </li>
+
+        
+
         <li class="nav-item">
-          <a class="nav-link" href="">About</a>
+          <a  [routerLink]="['/about']" class="nav-link" (click)="activeMenu=2" [class.active]="activeMenu===2" href="">About</a>
         </li>
+
       </ul>
     </div>
   </div>
 </nav>
 
-<app-learn></app-learn> <!--  เรียกหน้า quiz app -->
+<div class="page_content">
+  <router-outlet></router-outlet>
+  <!-- <app-quiz></app-quiz>  เรียกหน้า quiz app -->
+</div>

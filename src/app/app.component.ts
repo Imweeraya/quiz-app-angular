@@ -6,5 +6,5 @@ import { Component , inject } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  activeMenu = 0;
 }
