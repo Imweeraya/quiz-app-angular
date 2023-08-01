@@ -1,0 +1,70 @@
+.main {
+    height: 100vh;
+    width: 100vw;
+    border: 0px solid red;
+    background: url('../../assets/images/bgpink2.gif') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.eacQuizz {
+    background-color: rgb(255, 235, 207);
+    width: 60vw;
+    height: 40vh;
+    font-size: 25px;
+    color: rgb(72, 38, 50);
+    margin: 5vh auto; /* Center horizontally and 25% from the top vertically */
+    border: 5px dashed rgb(203, 176, 138); 
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 10px 15px rgb(90, 65, 79);
+}
+
+.content2 { 
+    background-color: rgb(255, 235, 207);
+    width: 60vw;
+    height: 45vh;
+    font-size: 25px;
+    color: rgb(72, 38, 50);
+    text-align:center;
+    margin: 5vh auto; /* Center horizontally and 25% from the top vertically */
+    border: 5px dashed rgb(203, 176, 138);; 
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 10px 15px rgb(90, 65, 79);
+  }
+
+
+  
+  .questionList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 15px;
+  }
+
+  ul{
+    list-style-type: none;
+  }
+
+  .eacButtonClick{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+

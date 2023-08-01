@@ -127,6 +127,12 @@ export class QuizService {
   getQuizData() {
     return this.quizData;
   }
+
+  quizDataNoImg: Question[] = []
+
+  getQuizDataNoImage(){
+    return this.quizData.filter(question => !question.image);
+  }
 }
 export { Question };
 

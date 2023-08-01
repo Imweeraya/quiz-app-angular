@@ -1,0 +1,49 @@
+<div class="main">
+
+    <div class="btn-group mt-5 d-flex justify-content-center" role="group" aria-label="Basic radio toggle button group">
+        <input (click)="setToEachQuestion()" type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+        <label class="btn btn-outline-light" for="btnradio1">Each Question</label>
+        <input (click)="setToQuestionList()" type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-light" for="btnradio2">Question List</label>
+    </div>
+    
+
+    <div class="container" *ngIf="eachQ; else listQ">
+
+
+        <div class="eacQuizz">
+            <h2 style="text-align: center;" class="my-3">{{currentQuestionIndex+1}} of {{questions.length}}</h2>
+            <div style="text-align: left;">
+                <h3 style="text-align: left;" class="mb-2">Q : {{questions[currentQuestionIndex].text}}</h3>
+                <h3 > A : {{answer}} </h3>
+            </div>
+        </div>
+        
+        <div class="eacButtonClick row">
+            <div class="col-xs-12 col-md-6">
+                <div class="d-flex justify-content-between">
+                    <button [disabled]="currentQuestionIndex==0" (click)="OnclickPre()" class="btn btn-light" style="width: 48%;">Previous</button>
+                    <button [disabled]="currentQuestionIndex==questions.length-1" (click)="OnclickNext()" class="btn btn-light" style="width: 48%;">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <ng-template #listQ>
+
+            <div class="content2">
+                <div class="questionList">
+                    <ul style="font-size: medium; text-align: left;">
+                        <li *ngFor="let question of questions">{{question.text}}</li>
+                    </ul>
+                    <ul style="font-size: medium; text-align: left; font-weight: 600;">
+                        <li  *ngFor="let answer of answerlist">🧠 {{answer}}</li>
+                    </ul>
+                </div>
+              </div>
+
+        </ng-template>
+    
+
+
+</div>

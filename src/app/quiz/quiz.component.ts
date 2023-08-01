@@ -43,8 +43,8 @@ export class QuizComponent {
 
   // Play sound
   private playSound(){
-    this.audio.load();
-    this.audio.addEventListener('canplaythrough' , () => {
+      this.audio.load();
+      this.audio.addEventListener('canplaythrough' , () => {
       this.audio.play();
     })
   }
