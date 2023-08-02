@@ -28,11 +28,13 @@ export class QuizComponent {
 
   //Method when user click choice
   onClickChoice(choice: Choices){ //variable choice type Choices
+    if(choice.isAnswer) this.score++ //if answer is correct
+    
     console.log('User clicked : ' + choice.text);
     console.log('Score : ' + this.score);
     this.playSound(); //play sound when click
 
-    if(choice.isAnswer) this.score++ //if answer is correct
+    
 
     if(this.currentQuestionIndex < this.questions.length - 1){
        this.currentQuestionIndex++

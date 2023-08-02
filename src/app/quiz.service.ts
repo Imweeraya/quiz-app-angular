@@ -115,8 +115,8 @@ export class QuizService {
     image: '../assets/images/q11.jpg',
     choices: [
         { id: 1, text: "Pablo Picasso", isAnswer: false },
-        { id: 2, text: "Leonardo Da Vinci", isAnswer: false },
-        { id: 3, text: "Vincent van Gogh", isAnswer: true },
+        { id: 2, text: "Leonardo Da Vinci", isAnswer: true },
+        { id: 3, text: "Vincent van Gogh", isAnswer: false },
         { id: 4, text: "Michelangelo", isAnswer: false }
     ]}
 
